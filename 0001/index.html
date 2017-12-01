@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Appearing Element on Hover</title>
+	</head>
+	<style>
+		#social_bar > * { display: inline-block; }
+		#social_bar img { position: relative; height: 50px; z-index: 1;  }
+		#social_bar p { position: absolute; right: 0; left: 0; text-align: center; opacity: 0; z-index: 0 ; transition: opacity 0.2s ease; }
+		#social_bar {
+			position: absolute;
+			height: 50px;
+		}
+		.fb { transition: padding-right 0.2s ease; }
+		.ig { transition: padding-left 0.2s ease; }
+
+		#social_bar:hover .fb { padding-right: 25px; }
+		#social_bar:hover .ig { padding-left: 25px; }
+		#social_bar:hover p { opacity: 1; }
+	</style>
+	<body>
+		<div id="social_bar">
+			<img class="fb" src="fb.png">
+			<p>Social</p>
+			<img class="ig" src="ig.png">
+		</div>
+	</body>
+</html>
